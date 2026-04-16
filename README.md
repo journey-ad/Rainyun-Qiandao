@@ -111,6 +111,10 @@ location = /rainyun {
     return 301 /rainyun/;
 }
 
+location = /favicon.ico {
+    return 204;
+}
+
 location ^~ /rainyun/ {
     proxy_pass http://127.0.0.1:8000/;
     proxy_set_header Host $host;
